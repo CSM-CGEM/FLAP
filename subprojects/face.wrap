@@ -1,4 +1,4 @@
 [wrap-git]
-url = https://github.com/jcapriot/FACE.git
+url = https://github.com/CSM-CGEM/FACE.git
 revision = HEAD
 depth = 1

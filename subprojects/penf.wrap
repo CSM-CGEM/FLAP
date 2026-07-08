@@ -1,4 +1,4 @@
 [wrap-git]
-url = https://github.com/jcapriot/PENF.git
+url = https://github.com/CSM-CGEM/PENF.git
 revision = HEAD
 depth = 1
