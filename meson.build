@@ -61,8 +61,8 @@ fc_id = fc.get_id()
 
 if 'intel' in fc_id
     add_project_arguments('-fpp', language: 'fortran')
-    add_project_arguments('-assume realloc_lhs', language : 'fortran')
     add_project_arguments('/Qdiag-disable:10448', language: 'fortran')
+    add_project_arguments('/Qdiag-disable:5268', language: 'fortran')
 elif 'gcc' in fc_id
     add_project_arguments('-cpp', language: 'fortran')
     add_project_arguments('-frealloc-lhs', language : 'fortran')
