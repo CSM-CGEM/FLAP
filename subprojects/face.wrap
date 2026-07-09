@@ -2,3 +2,6 @@
 url = https://github.com/CSM-CGEM/FACE.git
 revision = meson-build
 depth = 1
+
+[provide]
+face = libface_dep

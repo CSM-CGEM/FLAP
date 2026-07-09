@@ -69,11 +69,9 @@ elif 'gcc' in fc_id
     add_project_arguments('-ffree-line-length-none', language : 'fortran')
 endif
 
-face_proj = subproject('face')
-face_dep = face_proj.get_variable('libface_dep')
+face_dep = dependency('face')
 
-penf_proj = subproject('penf')
-penf_dep = penf_proj.get_variable('penf_dep')
+penf_dep = dependency('penf')
 
 subdir('src/lib')
 
