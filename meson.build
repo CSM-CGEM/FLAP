@@ -1,18 +1,13 @@
 project(
     'FLAP',
     'fortran',
-    version: '1.2.5',
+    version: '1.2.16',
     default_options:[
-        'fortran_std=f2003',
+        'fortran_std=f2008',
     ]
 )
 
 fc = meson.get_compiler('fortran')
-
-default_lib_type = get_option('default_library')
-if default_lib_type != 'static'
-    add_project_arguments('-fPIC', language : 'fortran')
-endif
 
 r16_code = '''
 program r16p_support;
@@ -71,6 +66,7 @@ if 'intel' in fc_id
 elif 'gcc' in fc_id
     add_project_arguments('-cpp', language: 'fortran')
     add_project_arguments('-frealloc-lhs', language : 'fortran')
+    add_project_arguments('-ffree-line-length-none', language : 'fortran')
 endif
 
 face_proj = subproject('face')

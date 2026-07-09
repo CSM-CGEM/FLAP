@@ -7,7 +7,7 @@ flap_srcs = files(
     'flap_utils_m.f90',
 )
 
-flap_lib = library(
+flap_lib = static_library(
     'flap',
     flap_srcs,
     dependencies: [face_dep, penf_dep]

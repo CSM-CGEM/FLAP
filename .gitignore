@@ -52,3 +52,9 @@ docs/public/coverage.json
 *.gcov
 parsed.xml
 source.xml
+
+subprojects/.wraplock
+
+subprojects/face
+
+subprojects/penf
